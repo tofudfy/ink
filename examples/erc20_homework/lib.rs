@@ -194,7 +194,7 @@ mod erc20 {
     /// Unit tests in Rust are normally defined within such a `#[cfg(test)]`
     /// module and test functions are marked with a `#[test]` attribute.
     /// The below code is technically just normal Rust code.
-    // #[cfg(feature = "ink-experimental-engine")]
+    #[cfg(feature = "ink-experimental-engine")]
     #[cfg(test)]
     mod tests {
         use super::*;
@@ -252,7 +252,6 @@ mod erc20 {
             ), 20);
         }
 
-        /*
         #[ink::test]
         fn transfer_from_works() {
             let mut contract = Erc20::new(100);
@@ -283,10 +282,9 @@ mod erc20 {
             ink_env::test::set_caller::<ink_env::DefaultEnvironment>(accounts.bob);
 
             assert_eq!(
-                contract.transfer_from(accounts.alice, accounts.charlie, 10),
+                contract.transfer_from(accounts.alice, accounts.charlie, 30),
                 Err(Error::InsufficientAllowance)
             );
         }
-         */
     }
 }

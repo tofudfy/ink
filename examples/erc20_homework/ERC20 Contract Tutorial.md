@@ -67,3 +67,12 @@ Check the remaining allowance form Alice to Charlie
 Check the balance again
 
 <img src="./imgs/transfer_from_balance.png" alt="transfer_from_balance" style="zoom:30%;" />
+
+## Unit tests
+Command:
+```aidl
+cargo +nightly test --features ink-experimental-engine
+```
+
+Result:
+<img src="./imgs/Unit tests.png" style="zoom:30%;" />
